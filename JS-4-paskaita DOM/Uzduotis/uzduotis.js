@@ -9,3 +9,8 @@ console.log(labels);
 
 const firstInput = document.querySelector("form > input");
 console.log(firstInput);
+
+const lastInput = document.querySelector("form > input:last-of-type");
+console.log(lastInput);
+
+console.log(lastInput.value);
