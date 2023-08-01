@@ -64,5 +64,5 @@ let replacedArr = [];
 for (let index = 0; index < arr4.length; index++) {
   const element = array[index];
 }
-
+console.log(replecedArr);
 //Validate Email Addresses Description: Create a function that takes an array of email addresses as input. Use a loop to validate each email address and return an array containing only the valid ones. Valid email addresses should have the format "username@domain.com". patikrintinti ar stringe yra "@" ir "." čia bus ciklas cikle

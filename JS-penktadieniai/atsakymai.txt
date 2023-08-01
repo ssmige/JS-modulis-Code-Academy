@@ -1,0 +1,142 @@
+ilter Even Numbers Create an array of numbers and write a JavaScript function to filter out and return only the even numbers using a loop and an if statement. Kad prideti nauja elements prie array rašom arr.push(elementas)
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const evenNumbers = [];
+
+for (let i = 0; i < numbers.length; i++) {
+
+  if (numbers[i] % 2 === 0) {
+
+evenNumbers.push(numbers[i]);
+
+  }
+
+}
+
+console.log(evenNumbers); // Output: [2, 4, 6, 8, 10]
+
+Sum of Array Write a function that takes an array of numbers as input and returns the sum of all the numbers using a loop
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let sum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+
+  sum += numbers[i];
+
+}
+
+console.log(sum); // Output: 55
+
+
+
+
+Array Reversal Write a function that takes an array as input and returns a new array with its elements reversed using a loop. Kad prideti nauja elements prie array rašom arr.push(elementas)
+
+const arr = [1, 2, 3, 4, 5];
+
+const reversedArray = [];
+
+for (let i = arr.length - 1; i >= 0; i--) {
+
+  reversedArray.push(arr[i]);
+
+}
+
+console.log(reversedArray); // Output: [5, 4, 3, 2, 1]
+
+
+
+
+Array Uniqueness Write a function that takes an array as input and returns a new array with duplicate elements removed using a loop. naudojam arr.includes
+
+const arr = [1, 2, 2, 3, 4, 4, 5];
+
+const uniqueArray = [];
+
+for (let i = 0; i < arr.length; i++) {
+
+  if (!uniqueArray.includes(arr[i])) {
+
+uniqueArray.push(arr[i]);
+
+  }
+
+}
+
+console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
+
+
+
+
+Count Occurrences in Array Description: Create a function that takes an array of numbers and a target number as inputs. Use a loop to count and return the number of occurrences of the target number in the array.
+
+const arr = [1, 2, 2, 3, 4, 4, 5];
+
+const target = 2;
+
+let count = 0;
+
+for (let i = 0; i < arr.length; i++) {
+
+  if (arr[i] === target) {
+
+count++;
+
+  }
+
+}
+
+console.log(count); // Output: 2
+
+
+
+
+
+Replace all occurances in an array with a different number: example array [ 1, 5, 'a', 76, 'b', 'a'] replace all 'a' with number 5
+
+const arr = [1, 5, 'a', 76, 'b', 'a'];
+
+const target = 'a';
+
+const replacement = 5;
+
+for (let i = 0; i < arr.length; i++) {
+
+  if (arr[i] === target) {
+
+arr[i] = replacement;
+
+  }
+
+}
+
+console.log(arr); // Output: [1, 5, 5, 76, 'b', 5]
+
+
+
+
+
+Validate Email Addresses Description: Create a function that takes an array of email addresses as input. Use a loop to validate each email address and return an array containing only the valid ones. Valid email addresses should have the format "username@domain.com". patikrintinti ar stringe yra "@" ir "." čia bus ciklas cikle
+
+const emails = ['user1@example.com', 'invalid.email', 'user2@example.com', 'user3@example.com'];
+
+const validEmails = [];
+
+for (let i = 0; i < emails.length; i++) {
+
+  const email = emails[i];
+
+  if (email.includes('@') && email.includes('.') && email.indexOf('@') < email.lastIndexOf('.')) {
+
+validEmails.push(email);
+
+  }
+
+}
+
+console.log(validEmails); // Output: ['user1@example.com', 'user2@example.com', 'user3@example.com']
+
+
