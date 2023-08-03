@@ -10,14 +10,13 @@ function ticketPrice(event) {
   event.preventDefault();
 
   const age = ageInput.value;
-
   let price = 6;
 
   if (age < 16) {
     price *= 0.5;
   }
   if (age > 60) {
-    price = price - price / 3;
+    price -= price / 3;
   }
   h1.textContent = `Kaina ${price} eur.`;
 }
