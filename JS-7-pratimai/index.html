@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
     <title>Document</title>
   </head>
   <body>
@@ -35,7 +36,7 @@
       <label for="temperC">Celsius (C°)</label>
       <input type="number" id="temperC" placeholder="Įvesti temperatūrą C°" />
       <br />
-      <p></p>
+
       <label for="temperF">Fahrenheitt (F°)</label>
       <input type="number" id="temperF" />
     </div>
@@ -52,6 +53,38 @@
         <button id="registrButton" type="submit">Registracija</button>
         <h3 id="h3RegistrPatvirtin"></h3>
       </form>
+    </div>
+
+    <div>
+      <h2>5 užduotis</h2>
+      <form id="task5">
+        <label for="nameInput">
+          Name <input type="text" id="nameInput"
+        /></label>
+        <br />
+        <label for="numInput"
+          >Number <input type="number" id="numInput"
+        /></label>
+        <br />
+        <button type="submit" id="addButton">Add</button>
+      </form>
+      <ul id="ul"></ul>
+    </div>
+
+    <div>
+      <h2>6 užduotis</h2>
+      <form id="form6">
+        <label for="inputNumTrikampiui"
+          >Trikampio dydis
+          <input
+            type="number"
+            id="inputNumTrikampiui"
+            placeholder="Įvesti skaičių"
+        /></label>
+        <br />
+        <!-- <button id="piestiButton" type="submit">Piešti trikampį</button> -->
+      </form>
+      <p id="pTrikampis"></p>
     </div>
   </body>
 </html>

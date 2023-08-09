@@ -7,13 +7,36 @@
     <script src="nd-8-formos.js" defer></script>
   </head>
   <body>
-    <!-- ....1 užduotis -->
-    <form id="forma1">
-      <label for="letterNumInput">Raidės dydis</label>
-      <input type="number" id="letterNumInput" />
-      <!-- <button id="buttonL" type="submit">Formuoti raidę L</button> -->
-    </form>
-    <p id="pLetterL1"></p>
-    <p id="pLetterL2"></p>
+    <div>
+      <h3>1 užduotis</h3>
+      <!-- ....1 užduotis mano variantas-->
+      <form id="forma1">
+        <label for="letterNumInput">Raidės dydis</label>
+        <input type="number" id="letterNumInput" min="0" />
+      </form>
+      <p id="pLetterL"></p>
+
+      <!-- 1  užduotis pagal ataskymą-->
+      <!-- <form>
+        <label for="size">Raidės dydis</label>
+        <input type="number" id="size" min="0" />
+      </form>
+      <p id="output"></p>
+    </div>
+    <div> -->
+      <h3>2 užduotis</h3>
+      <form>
+        <label for="size2">Raidės C dydis</label>
+        <input type="number" id="size2" min="0" />
+      </form>
+      <p id="output2"></p>
+    </div>
+
+    <div>
+      <h3>3 užduotis</h3>
+      <label for="nameInput">Vardas</label>
+      <input type="text" id="nameInput" />
+      <p id="outputName"></p>
+    </div>
   </body>
 </html>

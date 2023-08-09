@@ -50,7 +50,7 @@ function handleSubmit(event) {
 //Parašyk programą, kurioje vartotojas įrašo temperatūra Celsijumi, o programa paskaičiuoja ir atvaizduoja tą pačią temperatūrą Farenheitu.
 
 const celsiusInput = document.querySelector("#temperC");
-const p = document.querySelector("p");
+
 const fahrenheitInput = document.querySelector("#temperF");
 
 celsiusInput.addEventListener("input", convertcelsiusToFarenheit);
@@ -65,7 +65,7 @@ function convertcelsiusToFarenheit() {
 //Sukurk programą, kurioje reikia įvesti elektroninį paštą ir paspausti mygtuką "sutinku gauti laiškus". Suvedus duomenis, jei mygtukas "sutinku" nepasirinktas - išmeta - "Registracija nesėkminga. Jei pasirinktas - išmeta "El. paštas [paštas] sėkmingai užregistruotas".
 
 const emailInput = document.querySelector("#emailInput");
-const email = emailInput.value;
+
 const checkbox = document.querySelector("#acceptEmails");
 
 h3RegistrPatvirtin = document.querySelector("#h3RegistrPatvirtin");
@@ -76,9 +76,73 @@ form4.addEventListener("submit", sutinku);
 
 function sutinku(event) {
   event.preventDefault();
-
+  const email = emailInput.value;
   const checked = checkbox.checked;
   h3RegistrPatvirtin.textContent = checked
     ? `El. paštas ${email} sėkmingai užregistruotas`
     : `Registracija nesėkminga`;
+}
+
+//5 užduotis
+//Sukurk programą, kurioje bus du inputai - vardas (text) ir skaičius (number) ir tuščias <ul>. Įrašius formoje duomenis, po apačia turi susikurti list itemų tiek, kiek tu parašei skaičių. List itemuose turi būti tavo vardas :)
+
+const form5 = document.querySelector("#task5");
+const nameInput = document.querySelector("#nameInput");
+const numInput = document.querySelector("#numInput");
+const list = document.querySelector("#ul");
+
+const addButton = document.querySelector("#addButton");
+
+form5.addEventListener("submit", addListItems);
+
+function addListItems(event) {
+  event.preventDefault();
+  const panaikinti = document.querySelectorAll("li");
+  for (let i = 0; i < panaikinti.length; i++) {
+    panaikinti[i].remove();
+  }
+  const nameInList = nameInput.value;
+  const numListItems = numInput.value;
+  for (let i = 0; i < numListItems; i++) {
+    const listItems = document.createElement("li");
+    listItems.textContent = `${nameInList} `;
+    list.appendChild(listItems);
+  }
+}
+
+// 6 užduotis
+//    Sukurkite formą, kurioje vienas input - skaičius, įvesti stačiakampio dydį. Po forma - tegul būna tusčias div elementas. Jame reikia atvaizduoi trikampį pagal įvestą input. Šis pratimas - klasika programavimo ciklų srityje, tiek atsakymų, tiek teorijų, tiek sąmokslo teorijų internete - daugiau nei reikia; pasibaigus ar pastrigus - būtinai pasinagrinėkite (gal vienas iš paaiškinimų jums atvers duris į ciklų pasaulio aiškumą).
+// Pvz:
+// Įvesta: 2
+// Rezultatas:
+// *
+// **
+
+// Įvesta: 5
+// Rezultatas:
+// *
+// **
+// ***
+// ****
+// *****
+
+const form6 = document.querySelector("#form6");
+let inputNumTrikampiui = document.querySelector("#inputNumTrikampiui");
+
+const pTrikampis = document.querySelector("#pTrikampis");
+
+inputNumTrikampiui.addEventListener("input", piestiTrikampi);
+
+function piestiTrikampi() {
+  numStar = inputNumTrikampiui.value;
+  star = "";
+
+  for (let i = 0; i < numStar; i++) {
+    star += "*";
+  }
+  const trikampis = document.createElement("p");
+
+  trikampis.textContent = `${star}`;
+
+  pTrikampis.append(trikampis);
 }

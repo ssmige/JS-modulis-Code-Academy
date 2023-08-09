@@ -1,0 +1,26 @@
+button {
+  width: 100px;
+  color: antiquewhite;
+  background-color: green;
+}
+
+.button-left-top {
+  position: absolute;
+  left: 0px;
+  top: 0;
+}
+.button-right-top {
+  position: absolute;
+  right: 0px;
+  top: 0;
+}
+.button-right-bottom {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+}
+.button-left-bottom {
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+}
