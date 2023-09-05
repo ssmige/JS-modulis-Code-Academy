@@ -1,0 +1,57 @@
+html {
+  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  margin: auto;
+  width: 80%;
+  color: rgb(95, 91, 91);
+}
+header {
+  background-color: rgb(111, 224, 186);
+  color: antiquewhite;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header h3,
+h5 {
+  margin: 10px;
+  margin-left: 6.4rem;
+}
+
+.navigation {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.city-button {
+  background-color: white;
+  border: 1px, solid rgb(95, 91, 91);
+
+  padding: 9px;
+}
+.city-button:hover {
+  color: rgb(111, 224, 186);
+  background-color: white;
+  border-color: rgb(111, 224, 186);
+}
+
+.link-to-add {
+  text-decoration: none;
+  background-color: rgb(111, 224, 186);
+  color: white;
+  padding: 10px;
+}
+
+#houseCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+img {
+  width: 500px;
+}
