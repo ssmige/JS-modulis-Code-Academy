@@ -1,8 +1,10 @@
 //  BASE URL = https://robust-safe-crafter.glitch.me/
 
 //Sukuriame du puslapius (index.html ir add.html) - CSS frameworką naudoti galima, tačiau rekomenduotina daryti su custom CSS.
-const divCard = document.querySelector("#houseCard");
-const main = document.querySelector("main");
+
+const HOST = "https://robust-safe-crafter.glitch.me/";
+
+const container = document.querySelector(".container");
 
 // const imgInput = document.querySelector("#img");
 // const priceInput = document.querySelector("#price");
@@ -41,29 +43,78 @@ const main = document.querySelector("main");
 //   }
 // });
 
+// async function getHouses() {
+//   // houseCard.innerHTML = "";
+//   try {
+//     const response = await fetch(HOST);
+//     if (response.ok) {
+//       const houses = await response.json();
+//       houses.forEach((house) => {
+//         generateHouseCard(house);
+//       });
+//     } else {
+//       alert("Failed to fetch");
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
 async function getHouses() {
-  divCard.innerHTML = "";
   try {
-    const response = await fetch("https://robust-safe-crafter.glitch.me/");
+    const response = await fetch(HOST);
     if (response.ok) {
       const houses = await response.json();
-      console.log(houses);
       houses.forEach((house) => {
-        const img = document.createElement("img");
-        img.src = house.image;
-        const price = document.createElement("p");
-        price.textContent = `€ ${house.price}`;
-        const city = document.createElement("p");
-        city.textContent = house.city;
-        const description = document.createElement("p");
-        description.textContent = house.description;
-        divCard.append(img, price, city, description);
-        main.append(divCard);
+        console.log(houses);
+        generateHouseCard(house);
       });
+    } else {
+      alert("Failed to fetch");
     }
   } catch (error) {
-    console.log(error);
+    alert("Something went wrong");
   }
+}
+
+// function generateHouseCard(house) {
+//   const houseCard = document.createElement("div");
+//   productCard.classList.add("houseCard");
+
+//   const img = document.createElement("img");
+//   img.src = house.image;
+
+//   const price = document.createElement("h3");
+//   price.textContent = `€ ${house.price}`;
+
+//   const city = document.createElement("p");
+//   city.textContent = house.city;
+
+//   const description = document.createElement("p");
+//   description.textContent = house.description;
+
+//   houseCard.append(img, price, city, description);
+//   container.append(houseCard);
+// }
+
+function generateHouseCard(house) {
+  const productCard = document.createElement("div");
+  productCard.classList.add("houseCard");
+
+  const image = document.createElement("img");
+  image.src = house.image;
+
+  const pTitle = document.createElement("p");
+  pTitle.textContent = house.city;
+
+  const price = document.createElement("h3");
+  price.textContent = "€ " + `${product.price}`;
+
+  const description = document.createElement("p");
+  price.textContent = house.description;
+
+  productCard.append(image, pTitle, price, description);
+  container.append(houseCard);
 }
 
 getHouses();

@@ -29,8 +29,7 @@ h5 {
 }
 .city-button {
   background-color: white;
-  border: 1px, solid rgb(95, 91, 91);
-
+  border-style: solid;
   padding: 9px;
 }
 .city-button:hover {
@@ -46,12 +45,17 @@ h5 {
   padding: 10px;
 }
 
-#houseCard {
+.container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 25%);
+  gap: 20px;
+}
+#houseCard {
   text-align: center;
+  border: 1px solid rgb(193, 189, 189);
+  gap: 20px;
+  padding: 20px;
 }
 img {
-  width: 500px;
+  width: 200px;
 }
