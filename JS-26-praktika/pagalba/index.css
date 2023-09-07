@@ -1,0 +1,35 @@
+/* Style for the main container using flexbox
+.container {
+  display: flex;
+}
+
+/* Style for the profile section */
+.profile {
+  flex: 30%; /* Adjust the width as needed */
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+  /* padding-bottom: 100%; */
+  /* position: absolute; */
+  background-color: hwb(191 10% 8%);
+}
+
+.profile img {
+  width: 100px; /* Adjust the image size as needed */
+  border-radius: 50%;
+}
+
+/* Style for the info section */
+.info {
+  flex: 70%; /*Adjust the width as needed* */
+  padding: 20px;
+  display: flex;
+  flex-direction: line;
+}
+
+/* Style for the timeline and description columns */
+.timeline,
+.description {
+  flex: 30%, 70%; /* Each takes 50% of the parent flex container */
+  padding: 10px;
+} */

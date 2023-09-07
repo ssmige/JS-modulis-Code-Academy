@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(224, 223, 223);
+}
+.aside {
+  background-color: hwb(191 10% 8%);
+  /* position: absolute; */
+  text-align: center;
+  width: 30%;
+  height: 100%;
+}
+/* img {
+  /* webkit-background-clip: text;
+  webkit-text-fill-color: transparent; */
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

@@ -1,0 +1,46 @@
+/* Style for the main container using CSS Grid */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+  grid-template-areas: "left right";
+}
+
+/* Style for the left section */
+.left {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile img {
+  width: 100px; /* Adjust the image size as needed */
+  border-radius: 50%;
+}
+
+/* Style for the right section */
+.right {
+  grid-area: right;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 20px;
+}
+
+/* Style for each section within the right section */
+.section {
+  margin-bottom: 20px;
+}
+
+/* Style for the timeline and description columns */
+.timeline,
+.description {
+  grid-column: span 1;
+  padding: 10px;
+}
+
+/* Style for the bottom section */
+.bottom {
+  grid-area: bottom;
+  padding: 20px;
+}
